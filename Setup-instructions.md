@@ -1,4 +1,4 @@
-The Ads APIs Client Library for Java can be pulled in through **[Maven](#Maven)** or **[jars](#Using_the_library_without_Maven)**.
+The Ads APIs Client Library for Java can be pulled in through **[Maven](#Maven)** or **[jars](#using-the-library-without-maven)**.
 
 # Maven
 
