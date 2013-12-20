@@ -6,13 +6,13 @@ Whereas the old library only supported jars, the new library supports maven. Whe
 
 ## Getting the jars
 
-If you still want to use jars, you will find a _product_axis-jars-and-examples (i.e. ```adwords-axis-jars-and-examples.tar.gz```) download in the [releases](https://github.com/googleads/googleads-java-lib/releases) section. In the tarball, you will find all the jars you need in the lib/ folder.
+If you still want to use jars, you will find a _product_-axis-jars-and-examples (i.e. ```adwords-axis-jars-and-examples.tar.gz```) download in the [releases](https://github.com/googleads/googleads-java-lib/releases) section. In the tarball, you will find all the jars you need in the lib/ folder.
 
 When migrating from the old library to the new library, please make sure to remove all jars and files that the old library was using, particularly the client-config.wsdd (which axis will read from the classpath).  While none of the packages will conflict, it's better to remove these from your classpath to ensure you completely migrate.
 
 ## Using maven
 
-If you've chosen to upgrade to Maven, we suggest using the _product_axis-maven-and-examples (i.e. ```adwords-axis-maven-and-examples.tar.gz```) download in the [releases](https://github.com/googleads/googleads-java-lib/releases) section. You can import this project using [m2eclipse](http://www.eclipse.org/m2e/) or use the pom.xml as a starting point.
+If you've chosen to upgrade to Maven, we suggest using the _product_-axis-maven-and-examples (i.e. ```adwords-axis-maven-and-examples.tar.gz```) download in the [releases](https://github.com/googleads/googleads-java-lib/releases) section. You can import this project using [m2eclipse](http://www.eclipse.org/m2e/) or use the pom.xml as a starting point.
 
 #Making requests
 
