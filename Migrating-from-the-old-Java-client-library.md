@@ -100,11 +100,11 @@ CampaignServiceInterface campaignService =
 ```
 The AdWordsServices object is lightweight, but we recommend that it be instantiated once and reused as much as possible. Please note that this class is [thread-safe](Thread-Safety). As it retains no state from the session you pass in, you can reuse it with multiple sessions.
 
-*Important*: the service objects themselves retain a reference to your session. You can modify the session and the associated service object will start using those changes. These service objects are NOT threadsafe.
+**Important**: the service objects themselves retain a reference to your session. You can modify the session and the associated service object will start using those changes. These service objects are NOT threadsafe.
 
 Now you can make requests with the service class and associated objects as you would have with the old library.
 
-*Important*: The main difference after this is the package name for the generated class will look like `com.google.api.`*ads*`.adwords.`*axis*`.v201109.cm.Campaign` instead of `com.google.api.adwords.v201109.cm.Campaign`.
+**Important**: The main difference after this is the package name for the generated class will look like `com.google.api.ads.adwords.axis.v201109.cm.Campaign` instead of `com.google.api.adwords.v201109.cm.Campaign`.
 
 ##A word on ads.properties
 
