@@ -13,7 +13,9 @@ If the answer to (1) is yes, then you will be using offline credentials with an 
 
 If the answer to (2) is yes, then you will be setting up a web server to listen for redirects as the user logs in. You will need to register an application in the cloud console that can do this.
 
-For a screencast on how to do this, see: https://www.youtube.com/watch?v=82_fsNg2768
+For a screencast on how to do this, see: 
+
+[![IMAGE ALT TEXT HERE](http://img.youtube.com/vi/82_fsNg2768/0.jpg)](http://www.youtube.com/watch?v=82_fsNg2768)
 
 ##Creating an application identifier
 
