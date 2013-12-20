@@ -1,5 +1,3 @@
-Need help? 
-
 Coming from the old Java library? Learn how to [Migrate](wiki/Migrating-from-the-old-Java-client-library)
 
 Need help with [OAuth2](wiki/Using-OAuth2.0)?
