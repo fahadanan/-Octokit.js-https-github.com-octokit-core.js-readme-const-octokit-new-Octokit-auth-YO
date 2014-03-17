@@ -6,12 +6,12 @@ Previously, in a [blog post](http://googleadsdeveloper.blogspot.com/2012/08/oaut
 
 If you are coming from ClientLogin, you will need to ask yourself:
 
-  1. (**Native Application**) Is my application going to run offline or only ever use one user to log into the API?
-  1. (**Web Application**) Is my application going to be web application and request the user log in?
+  1. (**Installed Application**) Is my application going to run offline or only ever use one user to log into the API?
+  1. (**Web Application**) Is my application going to be a web application and request the user log in?
 
 If the answer to (1) is yes, then you will be using offline credentials with an installed application flow. Specifically, you will be using the OfflineCredentials utility in this library.
 
-If the answer to (2) is yes, then you will be setting up a web server to listen for redirects as the user logs in. You will need to register an application in the cloud console that can do this.
+If the answer to (2) is yes, then you will be setting up a web server to listen for redirects as the user logs in. You will need to register an application in the developers console that can do this.
 
 For a screencast on how to do this, see: 
 
@@ -21,18 +21,18 @@ For a screencast on how to do this, see:
 
 In order to use the OAuth2.0 authorization with Google services, you need to create an application identifier and secret (also known as client ID and client secret).
 
-Visit [Google Cloud Console](https://cloud.google.com/console)
+Visit [Google Developers Console](https://console.developers.google.com)
 
 **You do not need to enable any APIs for AdWords, DFA, and DFP in the console.**
 
 1. Create a new project (or use an existing project)
 1. Click the project to open
-1. On the left panel, click on **APIs & auth** to expand the menu, and then click on **Registered apps**
-1. Click on **Register App**
-1. Choose either **Native Application** or **Web Application** depending on the style of your application
-    * If you wish to use our sample code or the OfflineCredentials utility, i.e. [dfp/axis/auth/GetRefreshToken.java](https://github.com/googleads/googleads-java-lib/blob/master/examples/dfp_axis/src/main/java/dfp/axis/auth/GetRefreshToken.java) to generate a refresh token, then you have to choose **Native Application**.
+1. On the left panel, click on **APIs & auth** to expand the menu, and then click on **Credentials**
+1. Click on **CREATE NEW CLIENT ID**
+1. Choose either **Installed Application** or **Web Application** depending on the style of your application
+    * If you wish to use our sample code or the OfflineCredentials utility, i.e. [dfp/axis/auth/GetRefreshToken.java](https://github.com/googleads/googleads-java-lib/blob/master/examples/dfp_axis/src/main/java/dfp/axis/auth/GetRefreshToken.java) to generate a refresh token, then you have to choose **Installed Application**.
     * If you choose **Web Application**, you will also need to write your own web application that can complete the OAuth 2.0 flow. See [AdvancedCreateCredentialFromScratch.java](https://github.com/googleads/googleads-java-lib/blob/master/examples/dfp_axis/src/main/java/dfp/axis/auth/AdvancedCreateCredentialFromScratch.java) for an example of how to do that.
-1. Click **Register** to complete the steps. Client ID and client secret will be available underneath the **OAuth 2.0 Client ID** section (click to expand it if it’s not already expanded).
+1. Click **Create Client ID** to complete the steps. Client ID and client secret will be available under the new application.
 
 <img src="https://lh5.googleusercontent.com/-pIBySF-6Zkw/Up4dEDu3b5I/AAAAAAAAAfk/n1ydyPtn4lc/w870-h478-no/screen-for-wiki.png" />
 
@@ -44,8 +44,8 @@ All required settings can be configured via the relevant API configuration file 
 
 The required parameters are:
 ```
-# If you do not have a client ID or secret, please create one in the
-# API console: https://cloud.google.com/console
+# If you do not have a client ID or secret, please create a project in the
+# Developers console (see https://github.com/googleads/googleads-java-lib/wiki/Using-OAuth2.0).
 api.dfp.clientId=INSERT_CLIENT_ID_HERE
 api.dfp.clientSecret=INSERT_CLIENT_SECRET_HERE
 ...
