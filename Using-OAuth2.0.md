@@ -45,7 +45,8 @@ All required settings can be configured via the relevant API configuration file 
 The required parameters are:
 ```
 # If you do not have a client ID or secret, please create a project in the
-# Developers console (see https://github.com/googleads/googleads-java-lib/wiki/Using-OAuth2.0).
+# Developers console. See the following link for more information:
+# https://github.com/googleads/googleads-java-lib/wiki/Using-OAuth2.0
 api.dfp.clientId=INSERT_CLIENT_ID_HERE
 api.dfp.clientSecret=INSERT_CLIENT_SECRET_HERE
 ...
