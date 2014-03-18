@@ -34,7 +34,11 @@ Visit [Google Developers Console](https://console.developers.google.com)
     * If you choose **Web Application**, you will also need to write your own web application that can complete the OAuth 2.0 flow. See [AdvancedCreateCredentialFromScratch.java](https://github.com/googleads/googleads-java-lib/blob/master/examples/dfp_axis/src/main/java/dfp/axis/auth/AdvancedCreateCredentialFromScratch.java) for an example of how to do that.
 1. Click **Create Client ID** to complete the steps. Client ID and client secret will be available under the new application.
 
-<img src="https://lh5.googleusercontent.com/-pIBySF-6Zkw/Up4dEDu3b5I/AAAAAAAAAfk/n1ydyPtn4lc/w870-h478-no/screen-for-wiki.png" />
+    <img src="https://developers.google.com/adwords/api/images/oauth2-client-id-secret.png" />
+
+1. Make sure all of the required fields are filled and saved on the **Consent Screen**.
+
+    <img src="https://developers.google.com/adwords/api/images/oauth2-consent-screen-config.png" />
 
 The Client ID and secret values are the parameters you will need in the next step.
 
