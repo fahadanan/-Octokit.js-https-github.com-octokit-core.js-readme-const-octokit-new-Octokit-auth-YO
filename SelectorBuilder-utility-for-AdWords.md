@@ -33,8 +33,7 @@ Creating the `Selector` for this request using a `SelectorBuilder` is very strai
         .lessThan("Amount", 100 * 1000000L)
         .orderAscBy("Name")
         .offset(offset)
-        .limit(pageSize)
-        .build();
+        .limit(pageSize);
 
     CampaignPage page = null;
     do {
@@ -46,7 +45,8 @@ Creating the `Selector` for this request using a `SelectorBuilder` is very strai
       ...
 
       // Increment the offset to prepare for the next get request
-      selector = builder.increaseOffsetBy(pageSize).build();
+      builder.increaseOffsetBy(pageSize);
+
       // Keep track of the offset so the loop will exit when all pages
       // have been retrieved.
       offset += pageSize;
