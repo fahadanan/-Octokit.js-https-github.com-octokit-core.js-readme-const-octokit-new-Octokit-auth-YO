@@ -12,7 +12,7 @@ All of this code tends to look similar from case to case, so the client library 
 * [JAX-WS SelectorBuilder](https://github.com/googleads/googleads-java-lib/blob/master/modules/adwords_appengine/src/main/java/com/google/api/ads/adwords/jaxws/utils/v201409/SelectorBuilder.java)
 
 # Sample usage
-Let's take a look at common use case - creating a `Selector` to issue a [CampaignService.get](https://developers.google.com/adwords/api/docs/reference/v201409/CampaignService#get) request. In this example, we want to fetch all `Campaigns` using the following `Selector` setup:
+Let's take a look at a common use case - creating a `Selector` to issue a [CampaignService.get](https://developers.google.com/adwords/api/docs/reference/v201409/CampaignService#get) request. In this example, we want to fetch all `Campaigns` using the following `Selector` setup:
 
 * **fields**: `[Id, Name, StartDate, EndDate, Status, Amount]`
 * **predicates**:
