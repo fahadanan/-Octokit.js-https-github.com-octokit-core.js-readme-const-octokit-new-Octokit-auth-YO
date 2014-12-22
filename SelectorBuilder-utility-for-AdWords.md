@@ -55,4 +55,11 @@ Creating the `Selector` for this request using a `SelectorBuilder` is very strai
 That's all there is to it! Compare the code above to the same code to build a `Selector` directly, and you'll see that the builder-based approach requires far less code and is much more readable.
 
 # Further resources
-All of the AdWords API [examples](https://github.com/googleads/googleads-java-lib/tree/master/examples/adwords_axis/src/main/java/adwords/axis) in the client library use `SelectorBuilders`.
+The example above used just a few of the methods for setting `Predicates` (`in` and `lessThan`). The `SelectorBuilder` supports other types of `Predicates` as well, such as `equals`, `startsWith`, `containsAny`, etc. There's even an `equalsId(Long id)` method for filtering by `Id` (a common requirement). For the complete `SelectorBuilder` API, check out the Axis and JAX-WS implementations here:
+
+* [Axis SelectorBuilder](https://github.com/googleads/googleads-java-lib/blob/master/modules/adwords_axis/src/main/java/com/google/api/ads/adwords/axis/utils/v201409/SelectorBuilder.java)
+* [JAX-WS SelectorBuilder](https://github.com/googleads/googleads-java-lib/blob/master/modules/adwords_appengine/src/main/java/com/google/api/ads/adwords/jaxws/utils/v201409/SelectorBuilder.java)
+
+Both implementations are also included in the client library's [JavaDoc](http://googleads.github.io).
+
+Finally, all of the AdWords API [examples](https://github.com/googleads/googleads-java-lib/tree/master/examples/adwords_axis/src/main/java/adwords/axis) in the client library now use `SelectorBuilders` for `get` requests.
