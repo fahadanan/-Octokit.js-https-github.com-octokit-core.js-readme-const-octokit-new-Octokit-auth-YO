@@ -60,6 +60,6 @@ The example above used just a few of the methods for setting `Predicates` (`in` 
 * [Axis SelectorBuilder](https://github.com/googleads/googleads-java-lib/blob/master/modules/adwords_axis/src/main/java/com/google/api/ads/adwords/axis/utils/v201409/SelectorBuilder.java)
 * [JAX-WS SelectorBuilder](https://github.com/googleads/googleads-java-lib/blob/master/modules/adwords_appengine/src/main/java/com/google/api/ads/adwords/jaxws/utils/v201409/SelectorBuilder.java)
 
-Both implementations are also included in the client library's [JavaDoc](http://googleads.github.io).
+Both implementations are also included in the client library's [JavaDoc](http://googleads.github.io/googleads-java-lib).
 
 Finally, all of the AdWords API [examples](https://github.com/googleads/googleads-java-lib/tree/master/examples/adwords_axis/src/main/java/adwords/axis) in the client library now use `SelectorBuilders` for `get` requests.
