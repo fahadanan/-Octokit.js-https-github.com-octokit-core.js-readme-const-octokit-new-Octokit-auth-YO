@@ -19,6 +19,8 @@ For a screencast on how to do this, see:
 
 ##Creating an application identifier
 
+**Note:** The examples below are for DFP. Equivalent examples for AdWords can be found in the [auth folder of the AdWords module](https://github.com/googleads/googleads-java-lib/tree/master/examples/adwords_axis/src/main/java/adwords/axis/auth).
+
 In order to use the OAuth2.0 authorization with Google services, you need to create an application identifier and secret (also known as client ID and client secret).
 
 Visit [Google Developers Console](https://console.developers.google.com)
