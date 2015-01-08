@@ -67,7 +67,7 @@ To make it easy to use our library offline (i.e. like a service account would), 
   1. Enter your client ID and secret into the ads.properties file.
   1. Run GetRefreshToken.java
   1. Enter your refresh token into the ads.properties file.
-  1. Use the OfflineCredentials utility as shown in our [examples](https://github.com/googleads/googleads-java-lib/blob/master/examples/dfp_axis/src/main/java/dfp/axis/v201311/networkservice/GetCurrentNetwork.java#L52)
+  1. Use the OfflineCredentials utility as shown in our [examples](https://github.com/googleads/googleads-java-lib/blob/master/examples/dfp_axis/src/main/java/dfp/axis/v201411/networkservice/GetCurrentNetwork.java#L52)
 
 When you run GetRerefreshToken.java, you will get an authentication URL and a  prompt for the verification string when running this example from the command line. Copy and paste the auth URL into a browser to obtain the verification string. You will need to log in with your account credentials that you want to make API calls with.
 
