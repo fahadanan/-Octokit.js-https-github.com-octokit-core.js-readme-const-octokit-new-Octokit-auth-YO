@@ -28,10 +28,15 @@ Creating the `Selector` for this request using a `SelectorBuilder` is very strai
 
     // Create the SelectorBuilder.
     SelectorBuilder builder = new SelectorBuilder()
-        .fields("Id", "Name", "StartDate", "EndDate", "Status")
-        .in("Status", "ENABLED", "PAUSED")
-        .lessThan("Amount", 100 * 1000000L)
-        .orderAscBy("Name")
+        .fields(
+            CampaignField.Id,
+            CampaignField.Name,
+            CampaignField.StartDate,
+            CampaignField.EndDate,
+            CampaignField.Status)
+        .in(CampaignField.Status, "ENABLED", "PAUSED")
+        .lessThan(CampaignField.Amount, 100 * 1000000L)
+        .orderAscBy(CampaignField.Name)
         .offset(offset)
         .limit(pageSize);
 
