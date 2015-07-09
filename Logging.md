@@ -93,7 +93,7 @@ If you want to use JDK logging, add the following to your `pom.xml` file.
        <artifactId>log4j</artifactId>
        <version>1.2.16</version>
      </dependency>
-     <!-- Make SLF4J use log4j as the logging framework -->
+     <!-- Make SLF4J use JDK logging as the logging framework -->
      <dependency>
        <groupId>org.slf4j</groupId>
        <artifactId>slf4j-jdk14</artifactId>
