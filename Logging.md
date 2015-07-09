@@ -6,7 +6,8 @@
 
 # Overview
 The client library uses [SLF4J](http://www.slf4j.org/) for all logging. If you want to turn on logging,
-you must include a plugin that bridges SLF4J with a concrete logging framework.
+you must [include a plugin that bridges SLF4J with a concrete logging framework](http://www.slf4j.org/manual.html#swapping).
+
 To quickly get you started and to serve as an example of how to do this, each
 example distribution uses the [log4j](http://logging.apache.org/log4j/1.2/) framework.
 
@@ -58,6 +59,8 @@ This is where the flexibility of SLF4J proves useful. You simply need to:
 
 1. Include the SLF4J dependencies that bridge SLF4J to your logging framework of choice
 2. Configure the [relevant loggers](#overview) in the config file for your logging framework
+
+The [SLF4J manual](http://www.slf4j.org/manual.html#swapping) contains a list of bindings for common logging frameworks.
 
 ## If you are using jars
 
