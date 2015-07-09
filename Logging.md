@@ -1,8 +1,8 @@
 # Contents
 
 * [Overview](#overview)
-* [Using log4j with the example projects](#example-projects)
-* [Setting up your own project](#setting-up-your-project)
+* [Using log4j with the example projects](#using-log4j-with-the-example-projects)
+* [Setting up your own project](#setting-up-your-own-project)
 
 # Overview
 The client library uses [SLF4J](http://www.slf4j.org/) for all logging. If you want to turn on logging,
@@ -34,7 +34,7 @@ timestamp, service, method, endpoint URL.
 
 Because the client library uses SLF4J, the behavior of these loggers is highly customizable. Please see the `log4j.properties` or `src/main/resources/log4j.properties` file for details on the default behavior in each example project.
 
-# Using log4j with the example projects<a id="example-projects"></a>
+# Using log4j with the example projects
 To make it easier to enable logging in the example projects, each example project includes a sample `log4j.properties` file, as well as the log4j dependencies required at runtime.
 
 ## If you are using jars
@@ -53,7 +53,7 @@ If you downloaded a file like `adwords-axis-maven-and-examples-v.vv.vv.tar.gz`, 
 
 Maven should automatically include the log4j dependencies and the config file in your classpath, so logging will be enabled by default.
 
-# Setting up your own project<a id="setting-up-your-project"></a>
+# Setting up your own project
 This is where the flexibility of SLF4J proves useful. You simply need to:
 
 1. Include the SLF4J dependencies that bridge SLF4J to your logging framework of choice
