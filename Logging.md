@@ -64,7 +64,7 @@ The [SLF4J manual](http://www.slf4j.org/manual.html#swapping) contains a list of
 
 ## If you are using jars
 
-To use a different framework than log4j, remove the slf4j-log4j12 jar from your classpath and fetch a different one here: http://www.slf4j.org/download.html
+To use a different framework than log4j, remove the `slf4j-log4j12-v.v.v.jar` from your classpath and fetch a different one from <http://www.slf4j.org/download.html>.
 
 ## If you are using maven
 
