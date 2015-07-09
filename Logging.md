@@ -9,7 +9,7 @@ The client library uses [SLF4J](http://www.slf4j.org/) for all logging. If you w
 you must [include a plugin that bridges SLF4J with a concrete logging framework](http://www.slf4j.org/manual.html#swapping).
 
 To quickly get you started and to serve as an example of how to do this, each
-example distribution uses the [log4j](http://logging.apache.org/log4j/1.2/) framework.
+example distribution uses the [log4j](http://logging.apache.org/log4j/1.2/) framework, and includes a sample `log4j.properties` file that shows how you might configure logging if you decide to use log4j as your concrete logging framework.
 
 The library includes the following loggers:
 
@@ -22,7 +22,6 @@ The library includes the following loggers:
 Logs incoming and outgoing SOAP requests/responses. SOAP requests and
 responses are logged as WARN for exceptions and INFO for all other requests.
 You can configure your logging framework to accept logs on these parameters.
-See the example `log4j.properties` file for more information.
 
 **Request info loggers**
 
@@ -30,10 +29,10 @@ See the example `log4j.properties` file for more information.
     com.google.api.ads.dfa.lib.client.DfaServiceClient.requestInfoLogger
     com.google.api.ads.dfp.lib.client.DfpServiceClient.requestInfoLogger
 
-Logs all requests from the client library along with information such as the
-timestamp, service, method, endpoint URL.
+Logs a single line summary of each request from the client library that includes information such as the
+timestamp, service, method, endpoint URL, and success or failure of the request.
 
-Because the client library uses SLF4J, the behavior of these loggers is highly customizable. Please see the `log4j.properties` or `src/main/resources/log4j.properties` file for details on the default behavior in each example project.
+Because the client library uses SLF4J, the behavior of these loggers is highly customizable.
 
 # Using log4j with the example projects
 To make it easier to enable logging in the example projects, each example project includes a sample `log4j.properties` file, as well as the log4j dependencies required at runtime.
