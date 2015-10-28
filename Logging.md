@@ -40,16 +40,23 @@ timestamp, service, method, endpoint URL, and success or failure of the request.
 
     `com.google.api.ads.adwords.lib.utils.report_download`
 
+  Report requests:
+  * One-line summary logged to `INFO` for successful requests, and `WARN` for failed requests
+  * HTTP headers and complete AWQL or `ReportDefinition` XML logged to `INFO` for successful requests, and `WARN` for failed requests
+
+  Report responses:
+  * One-line summary including HTTP status code and message logged to `INFO` for successful requests, and `WARN` for failed requests
+
 * [BatchJob](https://developers.google.com/adwords/api/docs/guides/batch-jobs) requests:
 
     `com.google.api.ads.adwords.lib.utils.batch_job`
 
   Operation uploads:
-  * One-line summary to `INFO` for successful uploads, and `WARN` for failed uploads
-  * Complete upload contents to `DEBUG` for all uploads
+  * One-line summary logged to `INFO` for successful uploads, and `WARN` for failed uploads
+  * Complete upload contents logged to `DEBUG` for all uploads
 
   Batch job result downloads:
-  * One-line summary to `INFO` for successful downloads, and `WARN` for failed downloads
+  * One-line summary logged to `INFO` for successful downloads, and `WARN` for failed downloads
 
 Because the client library uses SLF4J, the behavior of these loggers is highly customizable.
 
