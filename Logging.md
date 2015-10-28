@@ -32,6 +32,25 @@ You can configure your logging framework to accept logs on these parameters.
 Logs a single line summary of each request from the client library that includes information such as the
 timestamp, service, method, endpoint URL, and success or failure of the request.
 
+**Product-specific loggers**
+
+**AdWords** has the following additional loggers.
+
+* [Reporting](https://developers.google.com/adwords/api/docs/guides/reporting):
+
+    `com.google.api.ads.adwords.lib.utils.report_download`
+
+* [BatchJob](https://developers.google.com/adwords/api/docs/guides/batch-jobs) requests:
+
+    `com.google.api.ads.adwords.lib.utils.batch_job`
+
+  Operation uploads:
+  * One-line summary to `INFO` for successful uploads, and `WARN` for failed uploads
+  * Complete upload contents to `DEBUG` for all uploads
+
+  Batch job result downloads:
+  * One-line summary to `INFO` for successful downloads, and `WARN` for failed downloads
+
 Because the client library uses SLF4J, the behavior of these loggers is highly customizable.
 
 # Using log4j with the example projects
