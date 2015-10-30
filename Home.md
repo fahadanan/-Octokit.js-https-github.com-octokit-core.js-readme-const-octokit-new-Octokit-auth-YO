@@ -8,9 +8,11 @@ Also, have you seen the [README](/googleads/googleads-java-lib/blob/master/READM
 
 Looking for [downloads](/googleads/googleads-java-lib/releases)?
 
+See the [JavaDoc](http://googleads.github.io/googleads-java-lib)
+
 Learn how to [use the library in a multi-threaded environment](https://github.com/googleads/googleads-java-lib/wiki/Thread-Safety)
 
-See the [JavaDoc](http://googleads.github.io/googleads-java-lib)
+Learn how to [use the reporting utilities for AdWords and DFP](https://github.com/googleads/googleads-java-lib/wiki/ReportDownloader-utilities)
 
 Working on AdWords? These guides may be helpful:
 * [SelectorBuilder](//github.com/googleads/googleads-java-lib/wiki/SelectorBuilder-utility-for-AdWords)
