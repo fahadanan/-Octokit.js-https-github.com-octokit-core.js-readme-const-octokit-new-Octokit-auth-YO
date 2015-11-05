@@ -13,7 +13,8 @@ Use the approach below to download a report's contents as a string with embedded
 
 ## AdWords
 
-    ReportDownloadResponse reportDownloadResponse = reportDownloader.downloadReport(...);
+    ReportDownloadResponse reportDownloadResponse = 
+        reportDownloader.downloadReport(...);
     String reportContents = reportDownloadResponse.getAsString();
 
 ## DFP
@@ -22,14 +23,16 @@ Use the approach below to download a report's contents as a string with embedded
     options.setExportFormat(exportFormat);
     options.setUseGzipCompression(true);
 
-    String reportContents = reportDownloader.getReportAsCharSource(options).read();
+    String reportContents = reportDownloader.
+        getReportAsCharSource(options).read();
 
 # Download report contents to a file
 Use the approach below to download a report's contents to a file.
 
 ## AdWords
 
-    ReportDownloadResponse reportDownloadResponse = reportDownloader.downloadReport(...);
+    ReportDownloadResponse reportDownloadResponse =
+        reportDownloader.downloadReport(...);
 
     File file = File.createTempFile("report", ".csv");
     reportDownloadResponse.saveToFile(file.getPath());
@@ -47,8 +50,8 @@ Use the approach below to download a report's contents to a file.
     options.setUseGzipCompression(true);
     URL url = reportDownloader.getDownloadUrl(options);
 
-    // Use the Resources and Files utilities in com.google.common.io to copy
-    // the report contents to the file.
+    // Use the Resources and Files utilities in com.google.common.io
+    // to copy the report contents to the file.
     Resources.asByteSource(url).copyTo(Files.asByteSink(file));
 
 # Process the report contents as a stream
@@ -58,32 +61,34 @@ The examples show how to convert the report output into a `CharSource` and then 
 
 ## AdWords
 
-    import com.google.api.client.util.Charsets;
-    import com.google.io.ByteSource;
-    import com.google.io.CharSource;
+    import java.io.BufferedReader;
+    import java.io.IOException;
+    import java.io.InputStreamReader;
     ...
 
-    final ReportDownloadResponse reportDownloadResponse = reportDownloader.downloadReport(...);
+    final ReportDownloadResponse reportDownloadResponse =
+        reportDownloader.downloadReport(...);
 
-    CharSource charSource = new ByteSource() {
-        @Override
-        public InputStream openStream() throws IOException {
-          return response.getInputStream();
-        }
-      }.asCharSource(Charsets.UTF_8);
-
-    for (String line : charSource.readLines()) {
-      // Process a single line of report contents...
+    BufferedReader responseReader = null;
+    try {
+      responseReader =
+          new BufferedReader(new InputStreamReader(
+              reportDownloadResponse.getInputStream()));
+      String line;
+      while ((line = responseReader.readLine()) != null) {
+        // Process a single line of report contents...
+      }
+    } finally {
+      if (responseReader != null) {
+        responseReader.close();
+      }
     }
 
 The example above will work for [text formats](https://developers.google.com/adwords/api/docs/guides/reporting#download-formats) such as `CSV`, `TSV`, and `XML`. If you request one of the gzipped formats such as `GZIPPED_CSV` or `GZIPPED_XML`, you should wrap the stream returned by `response.getInputStream()` in a `java.util.zip.GZIPInputStream`.
 
-    CharSource charSource = new ByteSource() {
-        @Override
-        public InputStream openStream() throws IOException {
-          return new GZIPInputStream(response.getInputStream());
-        }
-      }.asCharSource(Charsets.UTF_8);
+      responseReader = new BufferedReader(
+          new InputStreamReader(
+              new GZIPInputStream(reportDownloadResponse.getInputStream())));
 
 If you simply want to read the contents as a stream of bytes, you can just use the `InputStream` returned by `response.getInputStream()` directly.
 
