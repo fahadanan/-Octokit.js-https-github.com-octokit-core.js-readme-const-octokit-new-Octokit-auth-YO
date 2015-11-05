@@ -9,7 +9,7 @@ For examples of how to construct and issue report requests, see the following fo
 **Note:** Several of the examples below make use of [Guava I/O utilities](https://github.com/google/guava/wiki/IOExplained).
 
 # Download report contents as a string
-Use the approach below to download a report's contents as a string with embedded newlines.
+Use the approach below to download a report's contents as a string with embedded newlines. With this approach, you will hold the *entire contents of the report in memory*, so this is not the best option for large reports. Instead, consider [downloading to a file](#download-report-contents-to-a-file) or [processing the report contents as a stream](#process-the-report-contents-as-a-stream).
 
 ## AdWords
 
@@ -94,16 +94,26 @@ If you simply want to read the contents as a stream of bytes, you can just use t
 
 ## DFP
 
-    import com.google.io.CharSource;
+    import java.io.BufferedReader;
     ...
 
     ReportDownloadOptions options = new ReportDownloadOptions();
     options.setExportFormat(exportFormat);
     options.setUseGzipCompression(true);
 
-    CharSource charSource = reportDownloader.getReportAsCharSource(options);
-    for (String line : charSource.readLines()) {
-      // Process a single line of report contents...
+    BufferedReader contentsReader = null;
+    try {
+      contentsReader = reportDownloader.getReportAsCharSource(options)
+          .openBufferedStream();
+
+      String line;
+      while ((line = contentsReader.readLine()) != null) {
+        // Process a single line of report contents...
+      }
+    } finally {
+      if (contentsReader != null) {
+        contentsReader.close();
+      }
     }
 
 If you simply want to read the contents as a stream of bytes, you can just use the `InputStream` returned by `reportDownloader.getDownloadUrl().openStream()` directly.
