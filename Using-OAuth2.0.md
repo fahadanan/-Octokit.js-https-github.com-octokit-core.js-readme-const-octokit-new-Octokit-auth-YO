@@ -1,10 +1,8 @@
-An authorization method is a schema the client application uses to gain access to account information. AdWords, DFP, and DFA support several authorization methods including ClientLogin and OAuth2.0. If you are still using an email address and a password to access the API, you are using the ClientLogin method which is now [deprecated and is scheduled for sunset](https://developers.google.com/accounts/docs/AuthForInstalledApps).
+An authorization method is a schema the client application uses to gain access to account information. AdWords, DFP, and DFA support OAuth2.0. Previously, in a [blog post](http://googleadsdeveloper.blogspot.com/2012/08/oauth-in-ads-apis.html) we've covered general aspects of OAuth2.0 authorization and its benefits. This page focuses on how to use OAuth2.0 methods within the [Java client library](https://github.com/googleads/googleads-java-lib).
 
-Previously, in a [blog post](http://googleadsdeveloper.blogspot.com/2012/08/oauth-in-ads-apis.html) we've covered general aspects of OAuth2.0 authorization and its benefits. This page focuses on how to use OAuth2.0 methods within the [Java client library](https://github.com/googleads/googleads-java-lib).
+##Choosing the OAuth2.0 flow
 
-##Migrating to OAuth2.0 from ClientLogin
-
-If you are coming from ClientLogin, you will need to ask yourself:
+First, you will need decide which OAuth2.0 is the best fit for your use case:
 
   1. (**Installed Application**) Is my application going to run offline or only ever use one user to log into the API?
   1. (**Web Application**) Is my application going to be a web application and request the user log in?
