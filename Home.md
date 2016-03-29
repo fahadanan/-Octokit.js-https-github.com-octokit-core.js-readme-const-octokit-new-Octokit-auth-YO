@@ -15,5 +15,6 @@ Learn how to [use the library in a multi-threaded environment](https://github.co
 Learn how to [use the reporting utilities for AdWords and DFP](https://github.com/googleads/googleads-java-lib/wiki/ReportDownloader-utilities)
 
 Working on AdWords? These guides may be helpful:
+* [BatchJobHelper](//github.com/googleads/googleads-java-lib/wiki/BatchJobHelper-utility-for-AdWords)
 * [SelectorBuilder](//github.com/googleads/googleads-java-lib/wiki/SelectorBuilder-utility-for-AdWords)
 * [Shopping ProductPartitionTree utility](//github.com/googleads/googleads-java-lib/wiki/Shopping-product-partition-utility-for-AdWords)
