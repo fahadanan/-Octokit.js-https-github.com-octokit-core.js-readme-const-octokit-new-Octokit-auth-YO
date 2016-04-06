@@ -16,8 +16,11 @@ To see the utility in action, check out the code snippets in the [Batch Processi
   *  An implementation exists for each AdWords API version, both in Axis and JAX-WS.
      * Axis: `com.google.api.ads.adwords.axis.utils.API_VERSION.batchjob.BatchJobHelper`
      * JAX-WS: `com.google.api.ads.adwords.jaxws.utils.API_VERSION.batchjob.BatchJobHelper`
+  *  Implementations are *not* thread safe, so you should not share instances across threads.
 
 ## [BatchJobUploadStatus](https://github.com/googleads/googleads-java-lib/blob/master/modules/ads_lib/src/main/java/com/google/api/ads/adwords/lib/utils/BatchJobUploadStatus.java)
-  *  Primarily used for *incremental* uploads. Stores state information of the progress of uploads for a given `BatchJob`.
+  *  Stores state information of the progress of uploads for a given `BatchJob`.
+  *  Primarily used for *incremental* uploads.
+  *  Immutable and thread safe.
   *  Implements `java.io.Serializable` so you can save this object and deserialize it later to resume the operations upload for a `BatchJob`.
 
