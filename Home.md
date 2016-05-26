@@ -1,7 +1,3 @@
-Coming from the old Java library? Learn how to [Migrate](wiki/Migrating-from-the-old-Java-client-library)
-
-Need help with [OAuth2](Using-OAuth2.0)?
-
 Checkout the [FAQs](FAQ)
 
 Also, have you seen the [README](/googleads/googleads-java-lib/blob/master/README.md)
