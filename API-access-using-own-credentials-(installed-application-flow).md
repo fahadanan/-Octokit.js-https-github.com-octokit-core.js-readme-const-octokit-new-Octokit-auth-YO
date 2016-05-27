@@ -24,7 +24,6 @@ Follow the steps for the product you're using to generate a
     product.
 
    * [AdWords GetRefreshToken.java](https://github.com/googleads/googleads-java-lib/blob/master/examples/adwords_axis/src/main/java/adwords/axis/auth/GetRefreshToken.java)
-   * [DFP GetRefreshToken.java](https://github.com/googleads/googleads-java-lib/blob/master/examples/dfp_axis/src/main/java/dfp/axis/auth/GetRefreshToken.java)
 
 1.  Run this example.
 
@@ -55,8 +54,7 @@ Follow the steps for the product you're using to generate a
         and run the example.
 
 1.  The example will prompt you to visit a URL where you will need to allow the
-    OAuth2 credentials to access your AdWords account or DFP network on your
-    behalf.
+    OAuth2 credentials to access your AdWords account on your behalf.
 
     ```
     Paste this url in your browser:
@@ -64,7 +62,7 @@ Follow the steps for the product you're using to generate a
     ```
 
     Navigate to the URL in a private browser session or an incognito window. Log
-    in with the same Google account you use to access AdWords or DFP. Click
+    in with the same Google account you use to access AdWords. Click
     **Allow** on the OAuth2 consent screen.
 
     ![Consent screen allow](https://developers.google.com/ads/images/oauth2-consent-allow.png)
