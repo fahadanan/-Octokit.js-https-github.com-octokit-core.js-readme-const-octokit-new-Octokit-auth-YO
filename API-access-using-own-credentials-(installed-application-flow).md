@@ -9,8 +9,7 @@ allowed scopes for your OAuth2 credentials.
 Follow the steps for the product you're using to generate a
 **client ID and secret**, then come back to this page.
 
-* [AdWords](https://developers.google.com/adwords/api/docs/guides/authentication)
-* [DFP](https://developers.google.com/doubleclick-publishers/docs/authentication)
+* [AdWords](https://developers.google.com/adwords/api/docs/guides/authentication#installed)
 
 ### Step 2 - Setting up the client library
 
