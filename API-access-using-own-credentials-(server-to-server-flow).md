@@ -12,8 +12,8 @@ and a *JSON key file**, then come back to this page.
 >   If you're an AdWords user, please note that this flow requires a
     [Google Apps Domain](https://apps.google.com).
 
-*   [AdWords](https://developers.google.com/adwords/api/docs/guides/service-accounts#steps)
-*   [DFP](https://developers.google.com/doubleclick-publishers/docs/authentication)
+*   [AdWords](https://developers.google.com/adwords/api/docs/guides/authentication#setting_up_service_account_access)
+*   [DFP](https://developers.google.com/doubleclick-publishers/docs/authentication#service)
 
 ### Step 2 - Setting up the client library
 
