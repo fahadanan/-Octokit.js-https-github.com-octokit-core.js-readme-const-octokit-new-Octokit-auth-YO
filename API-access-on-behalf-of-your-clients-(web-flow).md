@@ -4,8 +4,8 @@ This guide will walk you through how to setup OAuth2 for API access on behalf of
 
 Follow the steps for the product you're using to generate a **client ID and secret**, then come back to this page.
 
-* [AdWords](https://developers.google.com/adwords/api/docs/guides/authentication)
-* [DFP](https://developers.google.com/doubleclick-publishers/docs/authentication)
+* [AdWords](https://developers.google.com/adwords/api/docs/guides/authentication#webapp)
+* [DFP](https://developers.google.com/doubleclick-publishers/docs/authentication#webapp)
 
 ### Step 2 - Setting up the client library
 
