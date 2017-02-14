@@ -17,7 +17,7 @@ and a *JSON key file**, then come back to this page.
 
 ### Step 2 - Setting up the client library
 
-1.  In your `ads.properties` file, set the full path to your JSON key file
-    ```
-    api.dfp.jsonKeyFilePath=INSERT_PATH_TO_JSON_KEY_FILE_HERE
-    ```
+In your `ads.properties` file, set the full path to your JSON key file:
+```
+api.dfp.jsonKeyFilePath=INSERT_PATH_TO_JSON_KEY_FILE_HERE
+```
