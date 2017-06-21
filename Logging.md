@@ -16,7 +16,6 @@ The library includes the following loggers:
 **SOAP loggers**
 
     com.google.api.ads.adwords.lib.client.AdWordsServiceClient.soapXmlLogger
-    com.google.api.ads.dfa.lib.client.DfaServiceClient.soapXmlLogger
     com.google.api.ads.dfp.lib.client.DfpServiceClient.soapXmlLogger
 
 Logs incoming and outgoing SOAP requests/responses. SOAP requests and
@@ -26,7 +25,6 @@ You can configure your logging framework to accept logs on these parameters.
 **Request info loggers**
 
     com.google.api.ads.adwords.lib.client.AdWordsServiceClient.requestInfoLogger
-    com.google.api.ads.dfa.lib.client.DfaServiceClient.requestInfoLogger
     com.google.api.ads.dfp.lib.client.DfpServiceClient.requestInfoLogger
 
 Logs a single line summary of each request from the client library that includes information such as the
