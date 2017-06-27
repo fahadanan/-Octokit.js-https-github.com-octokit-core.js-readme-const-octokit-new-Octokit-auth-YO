@@ -1,6 +1,7 @@
 # Contents
 
 * [Overview](#overview)
+* [Loggers](#loggers)
 * [Using log4j with the example projects](#using-log4j-with-the-example-projects)
 * [Setting up your own project](#setting-up-your-own-project)
 
@@ -11,9 +12,32 @@ you must [include a plugin that bridges SLF4J with a concrete logging framework]
 To quickly get you started and to serve as an example of how to do this, each
 example distribution uses the [log4j](http://logging.apache.org/log4j/1.2/) framework, and includes a sample `log4j.properties` file that shows how you might configure logging if you decide to use log4j as your concrete logging framework.
 
+Starting with release
+[3.5.0](https://github.com/googleads/googleads-java-lib/releases),
+all loggers use the following log levels:
+
+Response type | Summary level | Details level
+------------- | ------------- | -------------
+Successful    | INFO          | DEBUG
+Failed        | WARN          | INFO
+
+* **Summary** messages consist of a one-line summary of the request and
+  response.
+* **Details** messages contain additional information about the request
+  and response, such as the complete XML for SOAP calls.
+
+If you enable the `INFO` level on all loggers, your logs will contain
+*summary* messages for all requests and *details* for failed requests.
+This is the approach demonstrated in the sample `log4j.properties` files.
+
+If you want *details* for all requests regardless of success or failure, enable
+the `DEBUG` level on all loggers.
+
+# Loggers
+
 The library includes the following loggers:
 
-**SOAP loggers**
+## SOAP loggers
 
     com.google.api.ads.adwords.lib.client.AdWordsServiceClient.soapXmlLogger
     com.google.api.ads.dfp.lib.client.DfpServiceClient.soapXmlLogger
@@ -22,7 +46,7 @@ Logs incoming and outgoing SOAP requests/responses. SOAP requests and
 responses are logged as WARN for exceptions and INFO for all other requests.
 You can configure your logging framework to accept logs on these parameters.
 
-**Request info loggers**
+## SOAP request info loggers
 
     com.google.api.ads.adwords.lib.client.AdWordsServiceClient.requestInfoLogger
     com.google.api.ads.dfp.lib.client.DfpServiceClient.requestInfoLogger
@@ -30,7 +54,9 @@ You can configure your logging framework to accept logs on these parameters.
 Logs a single line summary of each request from the client library that includes information such as the
 timestamp, service, method, endpoint URL, and success or failure of the request.
 
-**Product-specific loggers**
+## Product-specific loggers
+
+### AdWords
 
 **AdWords** has the following additional loggers.
 
@@ -38,25 +64,17 @@ timestamp, service, method, endpoint URL, and success or failure of the request.
 
     `com.google.api.ads.adwords.lib.utils.report_download`
 
-  Report requests:
-  * One-line summary logged to `INFO` for successful requests, and `WARN` for failed requests
-  * HTTP headers and complete AWQL or `ReportDefinition` XML logged to `INFO` for successful requests, and `WARN` for failed requests
-
-  Report responses:
-  * One-line summary including HTTP status code and message logged to `INFO` for successful requests, and `WARN` for failed requests
+  Logs reporting requests and responses using the [levels described above](#overview).
+  Detail messages do not include the contents of successful report responses
+  since they may be extremely large.
 
 * [BatchJob](https://developers.google.com/adwords/api/docs/guides/batch-jobs) requests:
 
     `com.google.api.ads.adwords.lib.utils.batch_job`
 
-  Operation uploads:
-  * One-line summary logged to `INFO` for successful uploads, and `WARN` for failed uploads
-  * Complete upload contents logged to `DEBUG` for all uploads
-
-  Batch job result downloads:
-  * One-line summary logged to `INFO` for successful downloads, and `WARN` for failed downloads
-
-Because the client library uses SLF4J, the behavior of these loggers is highly customizable.
+  Logs batch job uploads and downloads using the [levels described above](#overview).
+  Detail messages do not include the contents of successful for batch job
+  downloads since they may be extremely large.
 
 # Using log4j with the example projects
 To make it easier to enable logging in the example projects, each example project includes a sample `log4j.properties` file, as well as the log4j dependencies required at runtime.
