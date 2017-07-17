@@ -1,6 +1,5 @@
 This guide will walk you through how to setup OAuth2 for API access using your
-own credentials using [installed application flow]
-(https://developers.google.com/identity/protocols/OAuth2#installed). These steps
+own credentials using [installed application flow](https://developers.google.com/identity/protocols/OAuth2#installed). These steps
 only need to be done once, unless you revoke, delete, or need to change the
 allowed scopes for your OAuth2 credentials.
 
