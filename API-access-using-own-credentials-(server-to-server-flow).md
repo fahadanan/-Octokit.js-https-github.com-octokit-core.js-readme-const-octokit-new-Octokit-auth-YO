@@ -1,6 +1,5 @@
 This guide will walk you through how to setup OAuth2 for API access using your
-own credentials using [server to server flow]
-(https://developers.google.com/identity/protocols/OAuth2#serviceaccount). These
+own credentials using [server to server flow](https://developers.google.com/identity/protocols/OAuth2#serviceaccount). These
 steps only need to be done once, unless you revoke or delete your OAuth2
 credentials.
 
