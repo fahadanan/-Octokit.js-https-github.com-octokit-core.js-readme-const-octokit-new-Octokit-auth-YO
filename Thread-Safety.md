@@ -1,4 +1,4 @@
-## Threadsafety in the Java library
+## Thread safety in the Java library
 
 Classes defined in the new java library, like most classes in Java, are not threadsafe.  Special care must be taken when using these objects in multiple threads.  In general, we don’t recommend sharing instances of our classes in multiple threads.  below is some code with comments explaining why.
 
