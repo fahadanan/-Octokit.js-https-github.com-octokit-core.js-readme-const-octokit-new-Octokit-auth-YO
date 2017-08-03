@@ -1,4 +1,4 @@
-##Threadsafety in the Java library
+## Threadsafety in the Java library
 
 Classes defined in the new java library, like most classes in Java, are not threadsafe.  Special care must be taken when using these objects in multiple threads.  In general, we don’t recommend sharing instances of our classes in multiple threads.  below is some code with comments explaining why.
 
@@ -24,7 +24,7 @@ MediaServiceInterface mediaService =
 
 Image image = new Image();
 // Utilities such as Media are usually static and therefore threadsafe.
-image.setData(Media.getMediaDataFromUrl("http://goo.gl/HJM3L"));
+image.setData(Media.getMediaDataFromUrl("https://goo.gl/3b9Wfh"));
 image.setType(MediaMediaType.IMAGE);
 
 // ReportDownloader retains a reference to the session and is not threadsafe.
@@ -33,22 +33,22 @@ ReportDownloadResponse response =
 ```
 
 
-##Service stubs
+## Service stubs
 Service stubs are the objects used to invoke webservice calls.  CampaignService and CompanyService are two examples for AdWords and DFP respectively.  These objects *are not* threadsafe and should have unique objects used per thread.
 
-##Service locators
+## Service locators
 Each product has a Services object such as AdWordsServices and DfpServices.  These objects **are** threadsafe and can be re-used across threads.  However, as mentioned above, the Service stubs returned by these classes **are not**.
 
 Note that when you request a service stub from a service locator, you provide the session that will be used to make requests.  If you make changes to the session, they will be used for all successive API calls.
 
-#Sessions
+# Sessions
 
 AdWordsSession and DfpSession hold information such as credentials and options used when making requests.  These objects **are not** threadsafe.  It is possible to make writes to this object (`.setClientCustomerId` in AdWordsSession, for example) which might let other threads view this object in an inconsistent state.
 
-###OAuth2
+### OAuth2
 The Credential object **is** threadsafe. Therefore, you can reuse the same credential object for different sessions across multiple threads.
 
-###AdWords
+### AdWords
 Here’s a pattern than can be use to perform the same operation over multiple accounts:
 
 ```java
@@ -61,7 +61,7 @@ for (String customerId: customerIds) {
 }
 ```
 
-###DFP
+### DFP
 Here’s a pattern than can be use to perform different operations with the same account:
 
 ```
@@ -75,5 +75,5 @@ new BarThread(builder.build()).start();
 new BazThread(builder.build()).start();
 ```
 
-##Utilities
+## Utilities
 Most of the client library utility classes are static and therefore threadsafe.  Classes such as the AdWords ReportDownloader are lightweight but **not** threadsafe (as it stores a reference to the session).
