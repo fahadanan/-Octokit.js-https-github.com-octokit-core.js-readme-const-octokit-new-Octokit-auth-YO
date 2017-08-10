@@ -10,7 +10,7 @@ The client library uses [SLF4J](http://www.slf4j.org/) for all logging. If you w
 you must [include a plugin that bridges SLF4J with a concrete logging framework](http://www.slf4j.org/manual.html#swapping).
 
 To quickly get you started and to serve as an example of how to do this, each
-example distribution uses the [log4j](http://logging.apache.org/log4j/1.2/) framework, and includes a sample `log4j.properties` file that shows how you might configure logging if you decide to use log4j as your concrete logging framework.
+example distribution uses the [log4j](http://logging.apache.org/log4j/1.2/) framework, and includes sample `log4j.properties` and `log4j.tofiles.properties` files that show how you might configure logging if you decide to use log4j as your concrete logging framework.
 
 Starting with release
 [3.5.0](https://github.com/googleads/googleads-java-lib/releases),
@@ -77,13 +77,17 @@ timestamp, service, method, endpoint URL, and success or failure of the request.
   downloads since they may be extremely large.
 
 # Using log4j with the example projects
-To make it easier to enable logging in the example projects, each example project includes a sample `log4j.properties` file, as well as the log4j dependencies required at runtime.
+To make it easier to enable logging in the example projects, each example project includes the log4j dependencies required at runtime, as well as two sample configuration files that enable the `INFO` level on all loggers.
+
+   * `log4j.properties` - Logs to stderr. The log4j framework will use this configuration file by default.
+   * `log4j.tofiles.properties` - Logs to files. To use this configuration, set the `log4j.configuration` system property to `log4j.tofiles.properties`.
 
 ## If you are using jars
 If you downloaded a file like `adwords-axis-jars-and-examples-v.vv.vv.tar.gz`, it will already include:
 
    * log4j dependencies in its `src/lib` folder
    * a default `log4j.properties` config file in its `src` folder
+   * an alternate `log4j.tofiles.properties` config file in its `src` folder
 
 Simply make sure that both the jars in `src/lib` and the `src/log4j.properties` file are in your classpath.
 
@@ -92,6 +96,7 @@ If you downloaded a file like `adwords-axis-maven-and-examples-v.vv.vv.tar.gz`, 
 
    * log4j dependencies in its `pom.xml` file
    * a default `log4j.properties` config file in its `src/main/resources` folder
+   * an alternate `log4j.tofiles.properties` config file in its `src/main/resources` folder
 
 Maven should automatically include the log4j dependencies and the config file in your classpath, so logging will be enabled by default.
 
