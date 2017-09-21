@@ -18,6 +18,13 @@ To see the utility in action, check out the code snippets in the [Batch Processi
      * JAX-WS: `com.google.api.ads.adwords.jaxws.utils.API_VERSION.batchjob.BatchJobHelper`
   *  Implementations are *not* thread safe, so you should not share instances across threads.
 
+To get a new instance of a class that implements `BatchJobHelperInterface`, use the `getUtility` method of your Axis or JAX-WS `AdWordsServices` object with the following arguments:
+  *  An `AdWordsSession`
+  *  The implementation class (see above). This will be a `BatchJobHelper` class in the package that corresponds to the SOAP toolkit (Axis or JAX-WS) and AdWords API version you are using.
+
+    BatchJobHelper batchJobHelper = adWordsServices.getUtility(session, BatchJobHelper.class);
+
+
 ## [BatchJobUploadStatus](https://github.com/googleads/googleads-java-lib/blob/master/modules/ads_lib/src/main/java/com/google/api/ads/adwords/lib/utils/BatchJobUploadStatus.java)
   *  Stores state information of the progress of uploads for a given `BatchJob`.
   *  Primarily used for *incremental* uploads.
