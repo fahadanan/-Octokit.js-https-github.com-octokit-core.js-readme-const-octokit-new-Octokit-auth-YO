@@ -9,17 +9,17 @@ now includes a number of utilities that will greatly simplify the process
 of maintaining your `ProductPartition` trees.
 
 # Key classes
-* [ProductPartitionNode](//googleads.github.io/googleads-java-lib/3.5.0/com/google/api/ads/adwords/axis/utils/v201705/shopping/ProductPartitionNode.html)
+* [ProductPartitionNode](//googleads.github.io/googleads-java-lib/3.9.0/com/google/api/ads/adwords/axis/utils/v201710/shopping/ProductPartitionNode.html)
     * Represents a node in the `ProductPartition` tree of a Shopping Campaign's AdGroup.
     * Includes methods for manipulating nodes (setting bids, changing a nodes type to/from `SUBDIVISION` or `UNIT`,
     excluding a node, etc.)
     * All methods return the mutated `ProductPartitionNode` to allow you to chain together multiple method calls.
-* [ProductPartitionTree](//googleads.github.io/googleads-java-lib/3.5.0/com/google/api/ads/adwords/axis/utils/v201705/shopping/ProductPartitionTree.html)
+* [ProductPartitionTree](//googleads.github.io/googleads-java-lib/3.9.0/com/google/api/ads/adwords/axis/utils/v201710/shopping/ProductPartitionTree.html)
     * Container that holds on to the root `ProductPartitionNode` of an AdGroup's `ProductPartition` tree.
     * Tracks changes made to the tree structure, and returns the collection of
     [AdGroupCriterionOperation](//developers.google.com/adwords/api/docs/reference/latest/AdGroupCriterionService.AdGroupCriterionOperation)
     objects that will modify the AdGroup to match the current state of the tree.
-* [ProductDimensions](//googleads.github.io/googleads-java-lib/3.5.0/com/google/api/ads/adwords/axis/utils/v201705/shopping/ProductDimensions.html)
+* [ProductDimensions](//googleads.github.io/googleads-java-lib/3.9.0/com/google/api/ads/adwords/axis/utils/v201710/shopping/ProductDimensions.html)
     * Static utility class with factory methods for each available subclass of
     [ProductDimension](//developers.google.com/adwords/api/docs/reference/latest/AdGroupCriterionService.ProductDimension).
 
@@ -61,7 +61,7 @@ To make your code more concise, add a static import of all of the methods on
 `ProductDimensions`. You'll use these to create `ProductDimension` objects. This
 will save you from typing a significant amount of boilerplate code.
 
-    import static com.google.api.ads.adwords.axis.utils.v201705.shopping.ProductDimensions.*;
+    import static com.google.api.ads.adwords.axis.utils.v201710.shopping.ProductDimensions.*;
 
 Using the `rootNode` from the previous step, change the bid for
 `ROOT/ProductType Level1 shoes/ProductTypeLevel2 athletic shoes/Condition used`
@@ -214,5 +214,5 @@ requires.
 
 # Code example
 The
-[AddProductPartitionTree code example](//github.com/googleads/googleads-java-lib/blob/master/examples/adwords_axis/src/main/java/adwords/axis/v201705/shoppingcampaigns/AddProductPartitionTree.java)
+[AddProductPartitionTree code example](//github.com/googleads/googleads-java-lib/blob/master/examples/adwords_axis/src/main/java/adwords/axis/v201710/shoppingcampaigns/AddProductPartitionTree.java)
 uses the `ProductPartitionTree` to replace the `ProductPartition` criteria of an AdGroup.
