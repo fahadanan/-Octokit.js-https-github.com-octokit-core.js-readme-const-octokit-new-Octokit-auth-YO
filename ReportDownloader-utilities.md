@@ -3,8 +3,8 @@ The client library includes `ReportDownloader` utilities for AdWords and DFP. Th
 
 For examples of how to construct and issue report requests, see the following folders:
 
-* AdWords: [examples/adwords_axis/src/main/java/adwords/axis/v201705/reporting](https://github.com/googleads/googleads-java-lib/tree/master/examples/adwords_axis/src/main/java/adwords/axis/v201705/reporting)
-* DFP: [examples/dfp_axis/src/main/java/dfp/axis/v201705/reportservice](https://github.com/googleads/googleads-java-lib/tree/master/examples/dfp_axis/src/main/java/dfp/axis/v201705/reportservice)
+* AdWords: [examples/adwords_axis/src/main/java/adwords/axis/v201710/reporting](https://github.com/googleads/googleads-java-lib/tree/master/examples/adwords_axis/src/main/java/adwords/axis/v201710/reporting)
+* DFP: [examples/dfp_axis/src/main/java/dfp/axis/v201705/reportservice](https://github.com/googleads/googleads-java-lib/tree/master/examples/dfp_axis/src/main/java/dfp/axis/v201708/reportservice)
 
 **Note:** Several of the examples below make use of [Guava I/O utilities](https://github.com/google/guava/wiki/IOExplained).
 
