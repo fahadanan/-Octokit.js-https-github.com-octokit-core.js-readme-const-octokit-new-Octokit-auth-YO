@@ -16,7 +16,20 @@ and a *JSON key file**, then come back to this page.
 
 ### Step 2 - Setting up the client library
 
+#### AdWords
+
+In your `ads.properties` file, set the full path to your JSON key file, and the
+email address of the user to impersonate:
+
+```
+api.adwords.jsonKeyFilePath=INSERT_PATH_TO_JSON_KEY_FILE_HERE
+api.adwords.serviceAccountUser=INSERT_SERVICE_ACCOUNT_USER_HERE
+```
+
+#### DFP
+
 In your `ads.properties` file, set the full path to your JSON key file:
+
 ```
 api.dfp.jsonKeyFilePath=INSERT_PATH_TO_JSON_KEY_FILE_HERE
 ```
