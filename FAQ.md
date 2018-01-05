@@ -12,11 +12,11 @@ for their proxy.
     https.proxyUser      Optional username for proxy authentication    someone
     https.proxyPassword  Optional proxy server password                secret
 
-These properties can be set with java args in your eclipse run configuration:
+These properties can be set with JVM args in your Eclipse run configuration:
 
-    -Dhttps.proxyHost=web-proxy -Dhttps.proxyPort=8080 -Dhttps.proxyUser=someone 
+    -Dhttps.proxyHost=web-proxy -Dhttps.proxyPort=8080 -Dhttps.proxyUser=someone
     -Dhttps.proxyPassword=secret ...
-        
+
 If necessary, set this up in code by doing the following:
 
     System.setProperty("https.proxyHost", "web-proxy");

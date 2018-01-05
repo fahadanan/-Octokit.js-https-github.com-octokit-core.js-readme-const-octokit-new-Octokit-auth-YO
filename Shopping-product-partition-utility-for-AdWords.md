@@ -4,7 +4,8 @@ Are you using the AdWords API to manage your [Shopping Campaigns](//www.google.c
 Do you want an easier solution for managing your [ProductPartition]() criteria
 (**Product Groups**)?
 
-If yes, then this guide is for you! The [Google Ads API Java Client Library](//github.com/googleads/googleads-java-lib)
+If yes, then this guide is for you! The
+[Google Ads APIs Client Library for Java](//github.com/googleads/googleads-java-lib)
 now includes a number of utilities that will greatly simplify the process
 of maintaining your `ProductPartition` trees.
 
