@@ -12,8 +12,9 @@ of maintaining your `ProductPartition` trees.
 # Key classes
 * [ProductPartitionNode](//googleads.github.io/googleads-java-lib/3.9.0/com/google/api/ads/adwords/axis/utils/v201710/shopping/ProductPartitionNode.html)
     * Represents a node in the `ProductPartition` tree of a Shopping Campaign's AdGroup.
-    * Includes methods for manipulating nodes (setting bids, changing a nodes type to/from `SUBDIVISION` or `UNIT`,
-    excluding a node, etc.)
+    * Includes methods for manipulating nodes (setting bids, setting tracking URL templates,
+    modifying custom parameters, changing a node's type to/from `SUBDIVISION` or `UNIT`, excluding a
+    node, etc.)
     * All methods return the mutated `ProductPartitionNode` to allow you to chain together multiple method calls.
 * [ProductPartitionTree](//googleads.github.io/googleads-java-lib/3.9.0/com/google/api/ads/adwords/axis/utils/v201710/shopping/ProductPartitionTree.html)
     * Container that holds on to the root `ProductPartitionNode` of an AdGroup's `ProductPartition` tree.
@@ -143,6 +144,12 @@ to a SUBDIVISION node, then add the following child UNIT nodes:
 * Condition = USED $1.50
 * Condition = `null` (the *All other* node) exclude from bidding
 
+In addition, this will set the tracking URL template and custom parameters for
+the NEW child UNIT node.
+
+**Tip:** Tracking URL template and custom parameters are only supported on
+biddable UNIT nodes.
+
 ```
     ProductPartitionNode walkingShoes = root
         .getChild(
@@ -152,7 +159,11 @@ to a SUBDIVISION node, then add the following child UNIT nodes:
         .asSubdivision();
     walkingShoes.addChild(
             createCanonicalCondition(ProductCanonicalConditionCondition.NEW))
-        .asBiddableUnit().setBid(1000000L);
+        .asBiddableUnit().setBid(1000000L)
+        .setTrackingUrlTemplate(
+            "http://www.example.com/tracking?season={_season}&promocode={_promocode}&u={lpurl}")
+        .putCustomParameter("season", "holidays")
+        .putCustomParameter("promocode", "NYC123");
     walkingShoes
         .addChild(
             createCanonicalCondition(ProductCanonicalConditionCondition.USED))
