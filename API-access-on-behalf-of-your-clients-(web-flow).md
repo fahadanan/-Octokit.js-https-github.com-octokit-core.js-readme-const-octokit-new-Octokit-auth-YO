@@ -9,7 +9,7 @@ Follow the steps for the product you're using to generate a **client ID and secr
 
 ### Step 2 - Setting up the client library
 
-If you authorizing on behalf of multiple users then you need to build OAuth2 sign-in flow into your application as part of adding OAuth2 support for your application. This involves three steps:
+If you are authorizing on behalf of multiple users then you need to build the OAuth2 sign-in flow into your application as part of adding OAuth2 support to your application. This involves three steps:
 
 1. Implement an AbstractAuthorizationCodeServlet
 
