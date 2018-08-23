@@ -1,6 +1,3 @@
-# DFP to Ad Manager rebrand guide
-
-
 ## Overview
 
 DoubleClick for Publishers was [recently renamed](https://www.blog.google/products/admanager/introducing-google-ad-manager/) to Google Ad Manager. To be consistent with these changes, we've updated our example code and refactored type names throughout this library. You'll only need to make a few small changes to upgrade your existing code. 
