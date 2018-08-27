@@ -9,9 +9,7 @@ DoubleClick for Publishers was [recently renamed](https://www.blog.google/produc
 
 *   The package `com.google.api.ads.dfp `was renamed to `com.google.api.ads.admanager`
 *   The property keys prefixed with `api.dfp` were renamed to `api.admanager`
-*   Classes containing "Dfp" were renamed to "AdManager". See the 
-
-[complete list ](#class-name-changes)of class name changes at the end of this post.
+*   Classes containing "Dfp" were renamed to "AdManager". See the [complete list ](#class-name-changes)of class name changes at the end of this post.
 
 Note: The maven package names are not changing and will continue to be dfp_axis and dfp_appengine<span style="color:#0d904f;">.</span>
 
