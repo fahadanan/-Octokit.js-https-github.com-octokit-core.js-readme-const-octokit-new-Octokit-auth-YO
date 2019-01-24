@@ -8,8 +8,8 @@ If you use the AdWords API, you'll need to create a [Selector](https://developer
 
 All of this code tends to look similar from case to case, so the client library includes a `SelectorBuilder` for both Axis and JAX-WS to streamline the creation of `Selectors`.
 
-* [Axis SelectorBuilder](https://github.com/googleads/googleads-java-lib/blob/master/modules/adwords_axis/src/main/java/com/google/api/ads/adwords/axis/utils/v201710/SelectorBuilder.java)
-* [JAX-WS SelectorBuilder](https://github.com/googleads/googleads-java-lib/blob/master/modules/adwords_appengine/src/main/java/com/google/api/ads/adwords/jaxws/utils/v201710/SelectorBuilder.java)
+* [Axis SelectorBuilder](https://github.com/googleads/googleads-java-lib/blob/master/modules/adwords_axis/src/main/java/com/google/api/ads/adwords/axis/utils/v201809/SelectorBuilder.java)
+* [JAX-WS SelectorBuilder](https://github.com/googleads/googleads-java-lib/blob/master/modules/adwords_appengine/src/main/java/com/google/api/ads/adwords/jaxws/utils/v201809/SelectorBuilder.java)
 
 # Sample usage
 Let's take a look at a common use case - creating a `Selector` to issue a [CampaignService.get](https://developers.google.com/adwords/api/docs/reference/latest/CampaignService#get) request. In this example, we want to fetch all `Campaigns` using the following `Selector` setup:
@@ -62,8 +62,8 @@ That's all there is to it! Compare the code above to the same code to build a `S
 # Further resources
 The example above used just a few of the methods for setting `Predicates` (`in` and `lessThan`). The `SelectorBuilder` supports other types of `Predicates` as well, such as `equals`, `startsWith`, `containsAny`, etc. There's even an `equalsId(Long id)` method for filtering by `Id` (a common requirement). For the complete `SelectorBuilder` API, check out the Axis and JAX-WS implementations here:
 
-* [Axis SelectorBuilder](https://github.com/googleads/googleads-java-lib/blob/master/modules/adwords_axis/src/main/java/com/google/api/ads/adwords/axis/utils/v201710/SelectorBuilder.java)
-* [JAX-WS SelectorBuilder](https://github.com/googleads/googleads-java-lib/blob/master/modules/adwords_appengine/src/main/java/com/google/api/ads/adwords/jaxws/utils/v201710/SelectorBuilder.java)
+* [Axis SelectorBuilder](https://github.com/googleads/googleads-java-lib/blob/master/modules/adwords_axis/src/main/java/com/google/api/ads/adwords/axis/utils/v201809/SelectorBuilder.java)
+* [JAX-WS SelectorBuilder](https://github.com/googleads/googleads-java-lib/blob/master/modules/adwords_appengine/src/main/java/com/google/api/ads/adwords/jaxws/utils/v201809/SelectorBuilder.java)
 
 Both implementations are also included in the client library's [JavaDoc](http://googleads.github.io/googleads-java-lib).
 
